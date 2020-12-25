@@ -9,14 +9,14 @@ import (
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
 	"github.com/go-chi/render"
-	"github.com/joho/godotenv"
+	//"github.com/joho/godotenv"
 )
 
 func main() {
-	if err := godotenv.Load(); err != nil {
-		log.Fatal("Error Loading .env File")
-		return
-	}
+	//if err := godotenv.Load(); err != nil {
+	//	log.Fatal("Error Loading .env File")
+	//	return
+	//}
 	router := CreateRoutes()
 
 	walkF := func(method string, route string, handler http.Handler, middlewares ...func(http.Handler) http.Handler) error {
